@@ -67,11 +67,13 @@
 8. Account Lockout Mechanism:
 - Account lockout counter saved in back-end, prevents possible brute force diddling
 - 5 wrong password attempts result in a 15 minute lockout
+- 10 minute session limit for all users; session is terminated upon browser close and logging out. 
 
 
 9. HTTPS
 - Self-signed certificates are used to encrypt communications to ensure data is protected from prying eyes
 - Openssl should be updated to latest verson to prevent possible exploitation of heartbleed bug
+- Implemented security headers with Flask-Talisman & tightened Content Security Policy
 
 10. Session Protection
 - Maximum session time for logged-in user = 10 minutes
